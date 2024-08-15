@@ -22,8 +22,8 @@ This repository contains an implementation of a Variational Autoencoder (VAE) mo
 - **Evaluating the VAE Fully Connected**: [eval_vae_fconnected_notebook](./notebooks/1-eval_vae_fconnected_notebook.ipynb)
 
 > #### Fully Convolutional 
-- **Training the VAE Fully Convolutional**: [train_vae_fconnected_notebook](./notebooks/2-train_vae_fconv_notebook.ipynb)
-- **Evaluating the VAE Fully Convolutional**: [eval_vae_fconnected_notebook](./notebooks/2-eval_vae_fconv_notebook.ipynb)
+- **Training the VAE Fully Convolutional**: [train_vae_fconv_notebook](./notebooks/2-train_vae_fconv_notebook.ipynb)
+- **Evaluating the VAE Fully Convolutional**: [eval_vae_fconv_notebook](./notebooks/2-eval_vae_fconv_notebook.ipynb)
 
 > #### GIFs & Videos
 - **Generating GIFs/Videos**: [video_gif_generator.ipynb](./video-gif/video_gif_generator.ipynb)
