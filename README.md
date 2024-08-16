@@ -2,7 +2,9 @@
 
 This repository contains an implementation of a Variational Autoencoder (VAE) model for generating 128x128 images of meandering rivers.
 
-![Meandering River GIF](./images/meandering_river-1..gif)
+![Meandering River PNG](./images/meandering_river-1.png)
+![Meandering River GIF](./images/meandering_river-1.gif)
+
 
 ## 🛠️ Requirements
 
