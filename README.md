@@ -4,7 +4,7 @@ This repository contains an implementation of a Variational Autoencoder (VAE) mo
 
 <div align="center">
   <div style="display: inline-block; vertical-align: top;">
-    <img src="./images/meandering_river-amazonas.jpg" alt="Meandering River" style="height: 128;  width: 200;"/>
+    <img src="./images/meandering_river-amazonas.jpg" alt="Meandering River" style="height: 125;  width: 200;"/>
   </div>
   <div style="display: inline-block;">
     <img src="./images/meandering_river-1.png" alt="Meandering River PNG" style="display: block;"/>
