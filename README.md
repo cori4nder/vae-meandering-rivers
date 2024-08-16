@@ -2,16 +2,15 @@
 
 This repository contains an implementation of a Variational Autoencoder (VAE) model for generating 128x128 images of meandering rivers.
 
-<div align="center" style="display: flex; justify-content: center; align-items: center;">
-  <div style="flex: 1; text-align: right;">
-    <img src="./images/meandering_river-amazonas.jpg" alt="Meandering River" style="width: 256px; height: 512px;"/>
+<div align="center">
+  <div style="display: inline-block; vertical-align: top;">
+    <img src="./images/meandering_river-amazonas.jpg" alt="Meandering River" style="height: 128;  width: 256;"/>
   </div>
-  <div style="flex: 1; margin-left: 20px; text-align: left;">
-    <img src="./images/meandering_river-1.png" alt="Meandering River PNG" style="display: block; width: 256px;"/>
-    <img src="./images/meandering_river-1.gif" alt="Meandering River GIF" style="display: block; width: 256px; margin-top: 10px;"/>
+  <div style="display: inline-block;">
+    <img src="./images/meandering_river-1.png" alt="Meandering River PNG" style="display: block;"/>
+    <img src="./images/meandering_river-1.gif" alt="Meandering River GIF" style="display: block;"/>
   </div>
 </div>
-
 
 ## 🛠️ Requirements
 
