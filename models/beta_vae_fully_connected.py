@@ -17,13 +17,13 @@ class VAE_FConnected(nn.Module):
         )
 
         self.flatten = nn.Flatten()
-        self.fc1 = nn.Linear(hidden_dim * 4 * 16 * 16, latent_dim) # alterar 16 com base na proporção da img
+        self.fc1 = nn.Linear(hidden_dim * 4 * 16 * 16, latent_dim) 
 
         self.mean_layer = nn.Linear(latent_dim, latent_dim)
         self.logvar_layer = nn.Linear(latent_dim, latent_dim)
 
         # decoder: fully connected layers + convolutional transpose layers
-        self.fc2 = nn.Linear(latent_dim, hidden_dim * 4 * 16 * 16)  # alterar 16 com base na proporção da img
+        self.fc2 = nn.Linear(latent_dim, hidden_dim * 4 * 16 * 16)  
 
         self.decoder_conv = nn.Sequential(
             nn.ConvTranspose2d(hidden_dim * 4, hidden_dim * 2, kernel_size=3, stride=2, padding=1, output_padding=1),  # output: [batch_size, 512, 32, 32]
@@ -39,7 +39,7 @@ class VAE_FConnected(nn.Module):
         x = self.flatten(x)
         x = self.fc1(x)
         mean, logvar = self.mean_layer(x), self.logvar_layer(x)
-        
+
         return mean, logvar
 
     def reparameterization(self, mean, logvar):
