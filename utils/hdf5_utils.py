@@ -1,7 +1,8 @@
 import h5py
 import torch
 import numpy as np
-import torchvision.transforms as transforms
+import matplotlib.pyplot as plt
+import torchvision.transforms as TF
 
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, TensorDataset
@@ -61,9 +62,27 @@ class HDF5DataHandler:
 
     def resize_images(self, new_size=(64, 64)):
 
-        resized_images = np.array([transforms.functional.resize(torch.tensor(img), new_size).numpy() for img in self.images])
+        resized_images = np.array([TF.functional.resize(torch.tensor(img), new_size).numpy() for img in self.images])
         self.train_images, self.test_images = train_test_split(resized_images, test_size=self.test_size, random_state=self.random_state)
         self.prepare_tensors()
+
+    def show_samples(self, dataloader, num_images=8):
+        # Obter um batch de dados do DataLoader
+        images_batch = next(iter(dataloader))
+        images = images_batch[0]  
+
+        images = images[:num_images]
+
+        plt.figure(figsize=(num_images, 1))
+
+        for i in range(num_images):
+            plt.subplot(1, num_images, i + 1)
+            img = images[i].squeeze()  
+            plt.imshow(img, cmap='gray')
+            plt.axis('off')
+
+        plt.subplots_adjust(wspace=0, hspace=0, left=0, right=1, top=1, bottom=0)
+        plt.show()
 
 # Exemplo de uso:
 # handler = HDF5DataHandler('/path/to/train_images.h5')
